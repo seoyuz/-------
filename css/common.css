@@ -1,6 +1,20 @@
 @import url("reset.css");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+.noto-sans-kr-400 {
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400 to 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BMDOHYEON";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMDOHYEON.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 body {
-  width: 1920px;
+  font-family: "Noto Sans KR", sans-serif;
 }
 
 a {
@@ -10,6 +24,7 @@ a {
 
 header {
   position: fixed;
+  z-index: 99;
   width: 100%;
   top: 0;
   left: 0;
@@ -20,17 +35,10 @@ header .hd-top {
   height: 100px;
   background-color: #fff;
 }
-header .hd-top .inner {
-  display: flex;
-  justify-content: space-between;
-  width: 80%;
-  height: 100%;
-  margin: 0 auto;
-}
-header .hd-top .inner h1 {
+header .hd-top .hd-inner h1 {
   display: inline-block;
 }
-header .hd-top .inner h1 a {
+header .hd-top .hd-inner h1 a {
   display: block;
   width: 205px;
   height: 24px;
@@ -38,7 +46,7 @@ header .hd-top .inner h1 a {
   background: url(../images/logo_color.png) no-repeat center;
   text-indent: -999px;
 }
-header .hd-top .inner #searchTop {
+header .hd-top .hd-inner #searchTop {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -46,19 +54,19 @@ header .hd-top .inner #searchTop {
   width: 450px;
   margin: auto;
 }
-header .hd-top .inner #searchTop .search-txt {
+header .hd-top .hd-inner #searchTop .search-txt {
   width: 450px;
   height: 45px;
   border: 3px solid #0162B1;
   box-sizing: border-box;
 }
-header .hd-top .inner #searchTop .search-txt::-moz-placeholder {
+header .hd-top .hd-inner #searchTop .search-txt::-moz-placeholder {
   padding-left: 14px;
 }
-header .hd-top .inner #searchTop .search-txt::placeholder {
+header .hd-top .hd-inner #searchTop .search-txt::placeholder {
   padding-left: 14px;
 }
-header .hd-top .inner #searchTop .search-btn {
+header .hd-top .hd-inner #searchTop .search-btn {
   position: absolute;
   top: 0;
   right: 0;
@@ -68,18 +76,22 @@ header .hd-top .inner #searchTop .search-btn {
   border: none;
   background: url("../images/ico_search.png") no-repeat center;
   background-color: #0162B1;
+  cursor: pointer;
 }
-header .hd-top .inner .right-btn-box li {
+header .hd-top .hd-inner .right-btn-box {
+  float: right;
+  margin-top: 35px;
+}
+header .hd-top .hd-inner .right-btn-box li {
   display: inline-block;
-  margin-top: 30px;
 }
-header .hd-top .inner .right-btn-box li img {
+header .hd-top .hd-inner .right-btn-box li img {
   display: block;
   width: 15px;
   height: 15px;
   margin: 0 auto 5px;
 }
-header .hd-top .inner .right-btn-box li:first-child {
+header .hd-top .hd-inner .right-btn-box li:first-child {
   margin-left: 0;
 }
 header .hd-bottom {
@@ -89,30 +101,64 @@ header .hd-bottom {
   color: #fff;
 }
 header .hd-bottom #gnb {
-  width: 70%;
-  margin: 0 auto;
+  height: 100%;
+  height: 280px;
   line-height: 66px;
 }
-header .hd-bottom #gnb ul {
+header .hd-bottom #gnb .depth1 {
   display: flex;
-  justify-content: space-between;
+  height: 66px;
 }
-header .hd-bottom #gnb ul li {
-  display: inline-block;
+header .hd-bottom #gnb .depth1 li {
   position: relative;
+  width: 15.66%;
+  text-align: center;
 }
-header .hd-bottom #gnb ul li::after {
+header .hd-bottom #gnb .depth1 li::before {
   position: absolute;
   content: "";
   top: 50%;
-  left: 150px;
+  right: 0;
   transform: translateY(-50%);
   width: 1px;
   height: 15px;
   background-color: gray;
 }
-header .hd-bottom #gnb ul li:last-child::after {
+header .hd-bottom #gnb .depth1 .menu-btn {
+  width: 66px;
+  background-color: #00457e;
+}
+header .hd-bottom #gnb .depth1 .menu-btn a {
+  vertical-align: middle;
+}
+header .hd-bottom #gnb .depth1 li:nth-child(6)::before, header .hd-bottom #gnb .depth1 li:last-child::before {
   background-color: transparent;
+}
+header .hd-bottom #gnb .depth2 {
+  flex-direction: column;
+  color: #444444;
+  transition: 0.3s;
+  display: none;
+}
+header .hd-bottom #gnb .depth2 li {
+  width: 100%;
+  background-color: #C5E5FF;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+header .hd-bottom #gnb .depth2 li:hover {
+  font-weight: 500;
+  color: #000;
+}
+header .hd-bottom #gnb .depth2 li::before {
+  display: none;
+}
+header .hd-bottom #gnb ul > li:hover .depth2 {
+  display: block;
+}
+header .hd-inner {
+  width: 1100px;
+  margin: 0 auto;
 }
 
 footer {
@@ -138,6 +184,7 @@ footer .inner .footer-info li .footer-logo {
 }
 footer .inner .footer-info li span {
   font-size: 20px;
+  font-weight: 500;
 }
 footer .inner .footer-info li ul {
   margin-top: 10px;
@@ -168,6 +215,7 @@ footer .inner .footer-info li .footer-site {
   border: 1px solid #fff;
   background-color: transparent;
   color: #fff;
+  cursor: pointer;
 }
 footer .inner .footer-info li .footer-site option {
   background-color: #444444;
