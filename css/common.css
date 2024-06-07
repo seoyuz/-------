@@ -32,12 +32,11 @@ header .hd-top .inner h1 {
 }
 header .hd-top .inner h1 a {
   display: block;
-  width: 150px;
+  width: 205px;
   height: 24px;
   margin-top: 40px;
   background: url(../images/logo_color.png) no-repeat center;
   text-indent: -999px;
-  border: 2px solid red;
 }
 header .hd-top .inner #searchTop {
   position: absolute;
@@ -63,8 +62,9 @@ header .hd-top .inner #searchTop .search-btn {
   position: absolute;
   top: 0;
   right: 0;
-  width: 45px;
-  height: 45px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
   border: none;
   background: url("../images/ico_search.png") no-repeat center;
   background-color: #0162B1;
