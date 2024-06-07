@@ -49,7 +49,7 @@ header .hd-top .inner #searchTop {
 }
 header .hd-top .inner #searchTop .search-txt {
   width: 450px;
-  height: 30px;
+  height: 45px;
   border: 3px solid #0162B1;
   box-sizing: border-box;
 }
@@ -63,18 +63,21 @@ header .hd-top .inner #searchTop .search-btn {
   position: absolute;
   top: 0;
   right: 0;
-  width: 30px;
-  height: 30px;
+  width: 45px;
+  height: 45px;
   border: none;
   background: url("../images/ico_search.png") no-repeat center;
   background-color: #0162B1;
 }
-header .hd-top .inner .right-btn-box {
-  margin-top: 26px;
-}
 header .hd-top .inner .right-btn-box li {
   display: inline-block;
-  margin-top: 18px;
+  margin-top: 30px;
+}
+header .hd-top .inner .right-btn-box li img {
+  display: block;
+  width: 15px;
+  height: 15px;
+  margin: 0 auto 5px;
 }
 header .hd-top .inner .right-btn-box li:first-child {
   margin-left: 0;
@@ -119,16 +122,12 @@ footer {
 }
 footer .inner {
   width: 80%;
-  height: 100%;
   margin: 0 auto;
   padding-top: 50px;
-  border: 2px solid white;
-  box-sizing: border-box;
 }
 footer .inner .footer-info {
   display: flex;
   justify-content: space-between;
-  border: 5px solid purple;
 }
 footer .inner .footer-info li {
   font-size: 18px;
@@ -161,4 +160,16 @@ footer .inner .footer-info li .footer-sns li {
 }
 footer .inner .footer-info li .footer-sns li:last-child {
   margin-right: 0;
+}
+footer .inner .footer-info li .footer-site {
+  width: 200px;
+  height: 40px;
+  margin-top: 10px;
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: #fff;
+}
+footer .inner .footer-info li .footer-site option {
+  background-color: #444444;
+  color: #fff;
 }
