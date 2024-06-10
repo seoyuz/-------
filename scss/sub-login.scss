@@ -23,7 +23,7 @@
                 span{
                     .remember-id{display: none;}
                     label{display: inline-block; cursor: pointer;}
-                    label::after { content: ''; display: inline-block; width: 17px; height: 17px; margin-left: 8px; background: url("../images/ico_check2.png") no-repeat center; vertical-align: bottom;}
+                    label::after {content: ''; display: inline-block; width: 17px; height: 17px; margin-left: 8px; background: url("../images/ico_check2.png") no-repeat center; vertical-align: bottom;}
                     /*checkbox off시*/
                     .remember-id + label {}
                     /*checkbox on시*/

@@ -1,0 +1,244 @@
+@charset "UTF-8";
+.container .contents {
+  width: 1280px;
+  margin: 0 auto;
+}
+.container .contents .step-box {
+  display: flex;
+  justify-content: space-around;
+  height: 100px;
+  border: 1px solid #AEAEAE;
+  border-radius: 2px;
+  background-color: #FAFAFA;
+  font-size: 24px;
+  color: #666666;
+  box-sizing: border-box;
+}
+.container .contents .step-box > li {
+  position: relative;
+  width: 320px;
+  line-height: 100px;
+  text-align: center;
+}
+.container .contents .step-box > li:nth-child(3)::before, .container .contents .step-box > li:nth-child(4)::before {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 31.5px;
+  background-color: #D1D1D1;
+  content: "";
+}
+.container .contents .step-box .step-now {
+  width: 342px;
+  border: 1px solid #0162B1;
+  background-color: #E9F5FF;
+  color: #0162B1;
+  box-sizing: border-box;
+}
+.container .contents .txt-box {
+  height: 182px;
+  margin-top: 40px;
+  padding: 33px 0 0 67px;
+  border: 1px solid #BFBFBF;
+  border-radius: 2px;
+  background: #F6F6F6;
+  line-height: 28.8px;
+  color: #555555;
+  box-sizing: border-box;
+}
+.container .contents .txt-box > li {
+  position: relative;
+}
+.container .contents .txt-box > li::before {
+  position: absolute;
+  left: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #555555;
+}
+.container .contents .terms-accordion {
+  margin-top: 40px;
+  border-radius: 2px;
+  background-color: #FAFAFA;
+  box-sizing: border-box;
+}
+.container .contents .terms-accordion > li {
+  position: relative;
+  box-sizing: border-box;
+  border-left: 1px solid #BFBFBF;
+  border-right: 1px solid #BFBFBF;
+}
+.container .contents .terms-accordion > li:first-child {
+  position: relative;
+  height: 100px;
+  padding-left: 41px;
+  border: 1px solid #BFBFBF;
+  background-color: #fff;
+  border-bottom: 1px solid #BFBFBF;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 100px;
+  color: #707070;
+  /*전체 동의가 액티브 됐을 때*/
+  /**/
+}
+.container .contents .terms-accordion > li:first-child.active {
+  border-color: #0162B1;
+  background-color: #F3FAFF;
+  color: #0162B1;
+  box-sizing: border-box;
+}
+.container .contents .terms-accordion > li:first-child.active label::before {
+  background: url("../images/ico_check2.png") no-repeat center;
+}
+.container .contents .terms-accordion > li:first-child .all-agree {
+  display: none;
+}
+.container .contents .terms-accordion > li:first-child label {
+  display: inline-block;
+  cursor: pointer;
+}
+.container .contents .terms-accordion > li:first-child label::before {
+  display: inline-block;
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background: url("../images/ico_check.png") no-repeat center;
+  content: "";
+}
+.container .contents .terms-accordion > li:first-child::before {
+  display: none;
+}
+.container .contents .terms-accordion > li .tit-box {
+  position: relative;
+  height: 60px;
+  padding-left: 62px;
+  border-bottom: 1px solid #BFBFBF;
+  line-height: 60px;
+}
+.container .contents .terms-accordion > li .tit-box::before {
+  position: absolute;
+  left: 41px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #444444;
+  content: "";
+}
+.container .contents .terms-accordion > li .tit-box h3 {
+  position: relative;
+  font-size: 20px;
+  font-weight: 350;
+  color: #444444;
+}
+.container .contents .terms-accordion > li .tit-box h3 span {
+  color: #0162B1;
+}
+.container .contents .terms-accordion > li .txt {
+  overflow-y: scroll;
+  height: 200px;
+  padding: 10px 30px;
+  border-bottom: 1px solid #BFBFBF;
+  background-color: #EFEFEF;
+  color: #464646;
+  line-height: 22.4px;
+  box-sizing: border-box;
+}
+.container .contents .terms-accordion > li .txt::-webkit-scrollbar {
+  width: 4px;
+}
+.container .contents .terms-accordion > li .txt::-webkit-scrollbar-thumb {
+  height: 76px;
+  border-radius: 2px;
+  background: rgba(35, 35, 35, 0.4);
+}
+.container .contents .terms-accordion > li .agree-box {
+  position: relative;
+  height: 80px;
+  padding: 14px 0 0 42px;
+  border-bottom: 1px solid #BFBFBF;
+  background-color: #FAFAFA;
+  color: #666666;
+  line-height: 25.6px;
+  vertical-align: middle;
+  box-sizing: border-box;
+}
+.container .contents .terms-accordion > li .agree-box .check-box {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  font-weight: 350;
+  color: #949494;
+}
+.container .contents .terms-accordion > li .agree-box .check-box input {
+  display: none;
+}
+.container .contents .terms-accordion > li .agree-box .check-box label {
+  cursor: pointer;
+}
+.container .contents .terms-accordion > li .agree-box .check-box label::before {
+  display: inline-block;
+  width: 14.62px;
+  height: 12.74px;
+  margin-right: 8.5px;
+  background: url("../images/ico_select.png") no-repeat center;
+  content: "";
+}
+.container .contents .terms-accordion > li .agree-box .check-box input:checked + label {
+  color: #0162B1;
+}
+.container .contents .terms-accordion > li .agree-box .check-box input:checked + label::before {
+  background: url("../images/ico_select2.png") no-repeat center;
+}
+.container .contents .terms-accordion .terms-2 .agree-box {
+  height: 60px;
+  padding-top: 18px;
+}
+.container .contents .terms-accordion .terms-3 .txt {
+  height: 89px;
+  padding-top: 20px;
+  line-height: 25.6px;
+  vertical-align: middle;
+}
+.container .contents .terms-accordion .terms-4 .txt {
+  overflow-y: visible;
+  height: 58px;
+  padding-top: 0;
+  line-height: 58px;
+}
+.container .contents .terms-accordion .terms-4 .agree-box {
+  height: 64px;
+  padding-top: 20px;
+}
+.container .contents .btn-box {
+  width: 576px;
+  margin: 0 auto;
+}
+.container .contents .btn-box button {
+  width: 280px;
+  height: 82px;
+  margin: 80px 0 100px 0;
+  border-color: transparent;
+  border-radius: 2px;
+  background-color: #6B6B6B;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+}
+.container .contents .btn-box button.blue-btn {
+  margin: 0 0 0 12px;
+  background-color: #0162B1;
+}

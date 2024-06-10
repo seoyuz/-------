@@ -1,0 +1,74 @@
+.container{
+
+    .contents{ width: 1280px; margin: 0 auto;
+    
+        .step-box{display: flex; justify-content: space-around; height: 100px; border: 1px solid #AEAEAE; border-radius: 2px; background-color: #FAFAFA; font-size: 24px; color: #666666; box-sizing: border-box;
+            >li{position: relative; width:(1280px/4); line-height: 100px; text-align: center;
+                &:nth-child(3)::before,&:nth-child(4)::before{position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 1px; height: 31.5px; background-color: #D1D1D1; content: '';}
+            }
+            .step-now{width: 342px; border: 1px solid #0162B1; background-color: #E9F5FF; color: #0162B1; box-sizing: border-box;}
+        }
+
+        .txt-box{height: 182px; margin-top: 40px; padding: 33px 0 0 67px; border: 1px solid #BFBFBF;  border-radius: 2px; background: #F6F6F6; line-height: 28.8px; color: #555555; box-sizing: border-box;
+        
+            >li{position: relative;}
+            >li::before{position: absolute; left: -15px; top: 50%; transform: translateY(-50%); content: ''; width: 4px; height: 4px; border-radius: 50%; background-color: #555555;}
+        }
+
+        .terms-accordion{margin-top: 40px;  border-radius: 2px; background-color: #FAFAFA; box-sizing: border-box;
+            
+            >li{position: relative; box-sizing: border-box; border-left: 1px solid #BFBFBF; border-right: 1px solid #BFBFBF;
+                &:first-child{position: relative; height: 100px; padding-left: 41px; border: 1px solid #BFBFBF; background-color: #fff; border-bottom: 1px solid #BFBFBF; font-size: 24px; font-weight: 400; line-height: 100px; color: #707070;
+                    /*전체 동의가 액티브 됐을 때*/
+                    &.active{border-color: #0162B1; background-color: #F3FAFF; color: #0162B1; box-sizing: border-box;
+                        label::before{background: url("../images/ico_check2.png") no-repeat center;}                       
+                    }
+                    /**/
+                    .all-agree{display: none;}
+                    label{display: inline-block; cursor: pointer;}
+                    label::before{display: inline-block; position: absolute; right: 40px; top: 50%; transform: translateY(-50%); width: 40px; height: 40px; background: url("../images/ico_check.png") no-repeat center; content: '';}
+
+                    &::before{display: none;}
+                }
+
+                .tit-box{position: relative; height: 60px; padding-left: 62px; border-bottom: 1px solid #BFBFBF; line-height: 60px;
+                    &::before{position: absolute; left: 41px; top: 50%; transform: translateY(-50%); width: 5px; height: 5px; border-radius: 50%; background-color: #444444; content: '';}
+
+                   h3{position: relative;  font-size: 20px; font-weight: 350; color: #444444;
+                        span{color: #0162B1;}
+                    } 
+                }
+
+                .txt{overflow-y: scroll; height: 200px; padding: 10px 30px; border-bottom: 1px solid #BFBFBF; background-color: #EFEFEF; color: #464646; line-height: 22.4px; box-sizing: border-box;
+                    &::-webkit-scrollbar{width: 4px;}
+                    &::-webkit-scrollbar-thumb{height: 76px; border-radius: 2px; background: #23232366;}
+                }
+
+                .agree-box{position: relative; height: 80px; padding: 14px 0 0 42px; border-bottom: 1px solid #BFBFBF; background-color: #FAFAFA; color: #666666; line-height: 25.6px; vertical-align: middle; box-sizing: border-box;
+                    .check-box{position: absolute; right: 30px; top: 50%; transform: translateY(-50%); font-size: 20px; font-weight: 350; color: #949494; 
+                        input{display: none;}
+                        label{cursor: pointer;}
+                        label::before{display: inline-block; width: 14.62px; height: 12.74px; margin-right: 8.5px; background: url("../images/ico_select.png") no-repeat center; content: '';}
+                        input:checked +label{color: #0162B1;}
+                        input:checked +label::before{background: url("../images/ico_select2.png") no-repeat center;}
+                    }
+                }
+            }
+            .terms-2{
+                .agree-box{height: 60px; padding-top: 18px;}
+            }
+            .terms-3{
+                .txt{height: 89px; padding-top: 20px; line-height: 25.6px; vertical-align: middle;}
+            }
+            .terms-4{
+                .txt{overflow-y: visible; height: 58px; padding-top: 0; line-height: 58px;}
+                .agree-box{height: 64px; padding-top: 20px;}
+            }
+        } 
+
+        .btn-box{width: 576px; margin: 0 auto;
+            button{width: 280px; height: 82px; margin: 80px 0 100px 0; border-color: transparent; border-radius: 2px; background-color:#6B6B6B ; font-size: 24px; color: #fff; cursor: pointer;}
+            button.blue-btn{margin: 0 0 0 12px; background-color: #0162B1;}
+        }
+    }
+}
