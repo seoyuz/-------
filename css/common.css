@@ -103,7 +103,6 @@ header .hd-bottom {
 }
 header .hd-bottom #gnb {
   height: 100%;
-  height: 280px;
   line-height: 66px;
 }
 header .hd-bottom #gnb .depth1 {
