@@ -8,6 +8,7 @@
             }
             .step-now{position: relative; width: 342px; color: #0162B1; box-sizing: border-box; 
                 &::before{position: absolute; left: -1px; top: -1px; width: 342px; height: 100px; background: url("../images/stepbox_1.png") no-repeat center; box-sizing: border-box; content: '';}
+                //이미지 수정
             }
         }
 
