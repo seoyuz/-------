@@ -230,6 +230,7 @@
 .container .contents .terms-accordion .terms-4 .txt {
   height: 89px;
   padding-top: 20px;
+  border-radius: 0 0 2px 2px;
   line-height: 25.6px;
   vertical-align: middle;
 }
