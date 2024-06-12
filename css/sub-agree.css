@@ -3,48 +3,8 @@
   width: 1280px;
   margin: 0 auto;
 }
-.container .contents .step-box {
-  display: flex;
-  justify-content: space-around;
-  height: 100px;
-  border: 1px solid #AEAEAE;
-  border-radius: 2px;
-  background-color: #FAFAFA;
-  font-size: 24px;
-  color: #666666;
-  box-sizing: border-box;
-}
-.container .contents .step-box > li {
-  position: relative;
-  width: 320px;
-  line-height: 100px;
-  text-align: center;
-}
-.container .contents .step-box > li:nth-child(3)::before, .container .contents .step-box > li:nth-child(4)::before {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 1px;
-  height: 31.5px;
-  background-color: #D1D1D1;
-  content: "";
-}
-.container .contents .step-box .step-now {
-  position: relative;
-  width: 342px;
-  color: #0162B1;
-  box-sizing: border-box;
-}
-.container .contents .step-box .step-now::before {
-  position: absolute;
-  left: -1px;
-  top: -1px;
-  width: 342px;
-  height: 100px;
+.container .contents .step-box::before {
   background: url("../images/stepbox_1.png") no-repeat center;
-  box-sizing: border-box;
-  content: "";
 }
 .container .contents .txt-box {
   height: 182px;

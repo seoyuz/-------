@@ -162,11 +162,107 @@ header .hd-inner {
 }
 
 /*main*/
-h2 {
+.contents {
+  width: 1280px;
+  margin: 0 auto;
+}
+.contents h2 {
   margin: 232px 0 61px 0;
   font-size: 48px;
   text-align: center;
   font-family: "BMDOHYEON";
+}
+.contents .step-box {
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  height: 100px;
+  border: 1px solid #AEAEAE;
+  border-radius: 2px;
+  background-color: #FAFAFA;
+  font-size: 24px;
+  color: #666666;
+  box-sizing: border-box;
+}
+.contents .step-box::before {
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  width: 1280px;
+  height: 100px;
+  background: url("../images/stepbox_2.png") no-repeat center;
+  box-sizing: border-box;
+  content: "";
+}
+.contents .step-box li {
+  position: relative;
+  width: 320px;
+  line-height: 100px;
+  text-align: center;
+}
+.contents .step-box .step-blue {
+  color: #0162B1;
+}
+.contents h3 {
+  position: relative;
+  margin: 0 0 40px 30px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #444444;
+}
+.contents h3::before {
+  position: absolute;
+  left: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #444444;
+  content: "";
+}
+.contents .txt-box {
+  margin-top: 40px;
+  padding: 33px 0 0 67px;
+  border: 1px solid #BFBFBF;
+  border-radius: 2px;
+  background: #F6F6F6;
+  line-height: 28.8px;
+  color: #555555;
+  box-sizing: border-box;
+}
+.contents .txt-box > li {
+  position: relative;
+}
+.contents .txt-box > li::before {
+  position: absolute;
+  left: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #555555;
+}
+.contents .btn-box {
+  width: 576px;
+  margin: 0 auto;
+}
+.contents .btn-box button {
+  width: 280px;
+  height: 82px;
+  margin: 80px 0 100px 0;
+  border-color: transparent;
+  border-radius: 2px;
+  background-color: #6B6B6B;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+}
+.contents .btn-box button.blue-btn {
+  margin: 0 0 0 12px;
+  background-color: #0162B1;
 }
 
 /*footer*/

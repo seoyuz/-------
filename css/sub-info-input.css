@@ -1,0 +1,126 @@
+.container .contents .step-box::before {
+  background: url(../images/stepbox_3.png) no-repeat center;
+}
+.container .contents .txt-box {
+  height: 157px;
+  padding: 29px 0 41px 52px;
+  color: #555555;
+}
+.container .contents .txt-box span {
+  color: #FF2E00;
+}
+.container .contents > div {
+  margin-top: 60px;
+}
+.container .contents > div #infoInput input {
+  padding-left: 30px;
+  height: 80px;
+  font-size: 24px;
+  line-height: 80px;
+  border: 1px solid #A5A5A5;
+  box-sizing: border-box;
+}
+.container .contents > div #infoInput input::-moz-placeholder {
+  color: #666666;
+}
+.container .contents > div #infoInput input::placeholder {
+  color: #666666;
+}
+.container .contents > div #infoInput button {
+  padding: 0;
+  width: 203px;
+  height: 80px;
+  border: none;
+  background-color: #0162B1;
+  font-size: 24px;
+  color: #FFFFFF;
+}
+.container .contents .member-info .id-box {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+}
+.container .contents .member-info .id-box .id-input {
+  width: 1065px;
+}
+.container .contents .member-info .id-box p {
+  display: block;
+}
+.container .contents .member-info p {
+  margin: 20px 0 40px 0;
+  font-size: 18px;
+  color: #666666;
+}
+.container .contents .member-info p span {
+  color: #FF2E00;
+}
+.container .contents .member-info input {
+  width: 100%;
+}
+.container .contents .contact-info input {
+  margin-bottom: 40px;
+  width: 100%;
+  border-radius: 2px;
+}
+.container .contents .contact-info input:last-child {
+  margin-bottom: 0;
+}
+.container .contents .contact-info .address-box {
+  display: flex;
+  justify-content: space-between;
+}
+.container .contents .contact-info .address-box .addr-input {
+  width: 724px;
+}
+.container .contents .contact-info .address-box .post-input {
+  width: 311px;
+}
+.container .contents .contact-info .bg-1 {
+  background-color: #F5F5F5;
+}
+.container .contents .reception-info > div {
+  margin-top: 40px;
+}
+.container .contents .reception-info > div .desc-box {
+  padding: 18px 0;
+  width: 100%;
+  height: 100px;
+  background-color: #F8F8F8;
+  border-radius: 2px;
+  font-size: 24px;
+  color: #444444;
+  line-height: 34px;
+  text-align: center;
+  box-sizing: border-box;
+}
+.container .contents .reception-info > div .desc-box span {
+  font-size: 16px;
+  color: #FF2E00;
+}
+.container .contents .reception-info > div #recept {
+  margin-top: 20px;
+}
+.container .contents .reception-info > div #recept fieldset {
+  display: flex;
+  justify-content: space-between;
+}
+.container .contents .reception-info > div #recept fieldset input {
+  display: none;
+}
+.container .contents .reception-info > div #recept fieldset label {
+  display: inline-block;
+  width: 634px;
+  height: 80px;
+  border: 1px solid #444444;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #444444;
+  text-align: center;
+  line-height: 80px;
+  cursor: pointer;
+}
+.container .contents .reception-info > div #recept fieldset input:checked + label {
+  border-color: #0162B1;
+  background-color: #E9F5FF;
+  color: #0162B1;
+}

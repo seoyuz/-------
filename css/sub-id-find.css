@@ -41,7 +41,7 @@
   font-weight: 700;
   color: #444444;
 }
-.container .contents .login-find > div .btn-box {
+.container .contents .login-find > div .btn-area {
   display: flex;
   justify-content: space-between;
 }

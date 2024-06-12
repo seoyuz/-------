@@ -2,48 +2,8 @@
   width: 1280px;
   margin: 0 auto;
 }
-.container .contents .step-box {
-  display: flex;
-  justify-content: space-around;
-  height: 100px;
-  border: 1px solid #AEAEAE;
-  border-radius: 2px;
-  background-color: #FAFAFA;
-  font-size: 24px;
-  color: #666666;
-  box-sizing: border-box;
-}
-.container .contents .step-box > li {
-  position: relative;
-  width: 320px;
-  line-height: 100px;
-  text-align: center;
-}
-.container .contents .step-box > li:nth-child(1)::before, .container .contents .step-box > li:nth-child(4)::before {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 1px;
-  height: 31.5px;
-  background-color: #D1D1D1;
-  content: "";
-}
-.container .contents .step-box .step-now {
-  position: relative;
-  width: 342px;
-  color: #0162B1;
-  box-sizing: border-box;
-}
-.container .contents .step-box .step-now::before {
-  position: absolute;
-  left: -1px;
-  top: -1px;
-  width: 342px;
-  height: 100px;
-  background: url("../images/stepbox_1.png") no-repeat center;
-  box-sizing: border-box;
-  content: "";
+.container .contents .step-box::before {
+  background: url("../images/stepbox_2.png") no-repeat center;
 }
 .container .contents .txt-box {
   margin-top: 40px;
@@ -81,17 +41,20 @@
   left: -15px;
   top: 50%;
   transform: translateY(-50%);
-  width: 5px;
-  height: 5px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background-color: #444444;
   content: "";
 }
 .container .contents .id-verifi {
-  padding: 36px 0 48px 52px;
+  height: 425px;
   border: 1px solid #BFBFBF;
   background-color: #F6F6F6;
   color: #555555;
+}
+.container .contents .id-verifi ul {
+  margin: 36px 0 0 52px;
 }
 .container .contents .id-verifi ul li {
   position: relative;
@@ -112,11 +75,11 @@
 }
 .container .contents .id-verifi .verifi-box {
   display: flex;
+  position: relative;
   justify-content: center;
   gap: 230px;
 }
 .container .contents .id-verifi .verifi-box > div {
-  position: relative;
   width: 416px;
   margin-top: 46px;
 }
@@ -149,7 +112,8 @@
 }
 .container .contents .id-verifi .verifi-box > div:last-child::before {
   position: absolute;
-  left: -25%;
+  left: 50%;
+  transform: translateX(-50%);
   width: 1px;
   height: 173.5px;
   background-color: #CECECE;
