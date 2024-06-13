@@ -1,43 +1,37 @@
 @charset "UTF-8";
-.container .contents {
-  width: 1064px;
-  margin: 0 auto;
-}
-.container .contents h2 {
-  margin-top: 232px;
-  font-size: 48px;
-  text-align: center;
-  font-family: "BMDOHYEON";
-}
-.container .contents .sub-tit-box {
+.sub-tit-box {
   display: flex;
   justify-content: space-between;
-  margin-top: 61px;
+  margin: 61px auto;
   padding: 42px 104px;
+  width: 1064px;
   border: 1px solid #EAEAEA;
   font-weight: 400;
   font-size: 20px;
   line-height: 32px;
   color: #333333;
   letter-spacing: -1px;
+  box-sizing: border-box;
 }
-.container .contents .sub-tit-box img {
+.sub-tit-box img {
   width: 114px;
   height: 109px;
   margin-right: 28px;
 }
-.container .contents .sub-tit-box p {
+.sub-tit-box p {
   margin-top: 10px;
 }
-.container .contents .sub-tit-box p span {
+.sub-tit-box p span {
   font-weight: 500;
   color: #0073D0;
 }
-.container .contents #logInBox {
-  margin-top: 80px;
+
+#logInBox {
+  margin: 80px auto 0;
+  width: 1064px;
   text-align: center;
 }
-.container .contents #logInBox .login-id, .container .contents #logInBox .login-pw {
+#logInBox .login-id, #logInBox .login-pw {
   display: block;
   width: 100%;
   height: 80px;
@@ -46,37 +40,37 @@
   box-sizing: border-box;
   font-size: 24px;
 }
-.container .contents #logInBox .login-pw {
+#logInBox .login-pw {
   margin: 40px 0 20px 0;
 }
-.container .contents #logInBox .login-id::-moz-placeholder, .container .contents #logInBox .login-pw::-moz-placeholder {
+#logInBox .login-id::-moz-placeholder, #logInBox .login-pw::-moz-placeholder {
   font-family: "Noto Sans KR", sans-serif;
   font-size: 24px;
   color: #999;
 }
-.container .contents #logInBox .login-id::placeholder, .container .contents #logInBox .login-pw::placeholder {
+#logInBox .login-id::placeholder, #logInBox .login-pw::placeholder {
   font-family: "Noto Sans KR", sans-serif;
   font-size: 24px;
   color: #999;
 }
-.container .contents #logInBox .login-option {
+#logInBox .login-option {
   display: flex;
   justify-content: space-between;
   font-size: 18px;
   color: #666666;
 }
-.container .contents #logInBox .login-option span {
+#logInBox .login-option span {
   /*checkbox off시*/
   /*checkbox on시*/
 }
-.container .contents #logInBox .login-option span .remember-id {
+#logInBox .login-option span .remember-id {
   display: none;
 }
-.container .contents #logInBox .login-option span label {
+#logInBox .login-option span label {
   display: inline-block;
   cursor: pointer;
 }
-.container .contents #logInBox .login-option span label::after {
+#logInBox .login-option span label::after {
   content: "";
   display: inline-block;
   width: 17px;
@@ -85,17 +79,17 @@
   background: url("../images/ico_check2.png") no-repeat center;
   vertical-align: bottom;
 }
-.container .contents #logInBox .login-option span .remember-id:checked + label::after {
+#logInBox .login-option span .remember-id:checked + label::after {
   background: url("../images/ico_check.png") no-repeat center;
 }
-.container .contents #logInBox .login-option ul li {
+#logInBox .login-option ul li {
   position: relative;
   display: inline;
 }
-.container .contents #logInBox .login-option ul li:first-child {
+#logInBox .login-option ul li:first-child {
   margin-right: 48px;
 }
-.container .contents #logInBox .login-option ul li:last-child::before {
+#logInBox .login-option ul li:last-child::before {
   position: absolute;
   left: -24px;
   top: 7px;
@@ -104,14 +98,50 @@
   height: 15px;
   background-color: #666666;
 }
-.container .contents #logInBox .login-btn {
-  width: 280px;
-  height: 82px;
-  margin: 80px 0 100px 0;
-  border: none;
-  background-color: #0162B1;
-  font-family: "Noto Sans KR", sans-serif;
-  font-size: 24px;
-  color: #fff;
-  cursor: pointer;
+#logInBox .btn-solid-blue {
+  margin: 0 auto;
+}
+
+/*반응형*/
+@media all and (min-width: 769px) and (max-width: 1024px) { /*769px ~ 1024px*/
+  .contents {
+    width: 850px;
+  }
+  .contents h2 {
+    margin-bottom: 40px;
+  }
+  .contents .sub-tit-box {
+    margin: 0 auto;
+    padding: 25px 50px;
+    width: 800px;
+    font-size: 18px;
+  }
+  .contents .sub-tit-box p {
+    margin: 0;
+  }
+  .contents #logInBox {
+    width: 100%;
+  }
+}
+@media all and (max-width: 768px) { /* ~ 768px*/
+  .contents {
+    width: 680px;
+    border: 1px solid red;
+  }
+  .contents h2 {
+    margin-bottom: 40px;
+    font-size: 40px;
+  }
+  .contents .sub-tit-box {
+    margin: 0 auto;
+    padding: 25px 50px;
+    width: 600px;
+    font-size: 16px;
+  }
+  .contents .sub-tit-box p {
+    margin: 0;
+  }
+  .contents #logInBox {
+    width: 100%;
+  }
 }

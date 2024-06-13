@@ -1,33 +1,8 @@
-.container .contents {
-  width: 1280px;
-  margin: 0 auto;
-}
 .container .contents .step-box::before {
   background: url("../images/stepbox_2.png") no-repeat center;
 }
 .container .contents .txt-box {
-  margin-top: 40px;
-  padding: 33px 0 33px 67px;
-  border: 1px solid #BFBFBF;
-  border-radius: 2px;
-  background: #F6F6F6;
-  line-height: 28.8px;
-  color: #555555;
-  box-sizing: border-box;
-}
-.container .contents .txt-box > li {
-  position: relative;
-}
-.container .contents .txt-box > li::before {
-  position: absolute;
-  left: -15px;
-  top: 50%;
-  transform: translateY(-50%);
-  content: "";
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background-color: #555555;
+  height: 241px;
 }
 .container .contents h3 {
   position: relative;
@@ -118,23 +93,4 @@
   height: 173.5px;
   background-color: #CECECE;
   content: "";
-}
-.container .contents .btn-box {
-  width: 576px;
-  margin: 0 auto;
-}
-.container .contents .btn-box button {
-  width: 280px;
-  height: 82px;
-  margin: 80px 0 100px 0;
-  border-color: transparent;
-  border-radius: 2px;
-  background-color: #6B6B6B;
-  font-size: 24px;
-  color: #fff;
-  cursor: pointer;
-}
-.container .contents .btn-box button.blue-btn {
-  margin: 0 0 0 12px;
-  background-color: #0162B1;
 }

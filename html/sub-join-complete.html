@@ -9,31 +9,31 @@
 </head>
 <body>
     <div id="wrap" class="main">
-        <!--header-->
+        <!-- header -->
         <header>
             <div class="hd-top">
-                <div class="hd-inner">
-                    <h1 id="logo">
-                        <a href="#none">온라인 청년센터</a>
-                    </h1>
-                    <form action="" id="searchTop">
-                        <input class="search-txt" type="text" name="" placeholder="청년정책, 청년공간 검색을 해보자!">
-                        <button class="search-btn" type="submit"></button>
-                    </form>
-                    <ul class="right-btn-box">
-                        <li>
-                            <a href="#none">
-                                <img src="../images/ico_login_black.png" alt="">
-                                로그인
+                    <div class="hd-inner">
+                        <h1 id="logo">
+                            <a href="#none">온라인 청년센터</a>
+                        </h1>
+                        <form action="" id="searchTop">
+                            <input class="search-txt" type="text" name="" placeholder="청년정책, 청년공간 검색을 해보자!">
+                            <button class="search-btn" type="submit"></button>
+                        </form>
+                        <ul class="right-btn-box">
+                            <li>
+                                <a href="#none">
+                                    <img src="../images/ico_login_black.png" alt="">
+                                    로그인
+                                </a>
+                            </li>
+                            <li><a href="#none">
+                                <img src="../images/ico_join_black.png" alt="">
+                                회원가입
                             </a>
-                        </li>
-                        <li><a href="#none">
-                            <img src="../images/ico_join_black.png" alt="">
-                            회원가입
-                        </a>
-                        </li>
-                    </ul>
-                </div>
+                            </li>
+                        </ul>
+                    </div>
             </div>
             <div class="hd-bottom">
                 <div class="hd-inner">
@@ -89,8 +89,8 @@
                                     <li><a href="#none">depth2-3</a></li>
                                 </ul>
                             </li>
-                            <li class="menu-btn"><a href="#none"><img src="../images/ham_btn.png" alt=""></a></li>
                         </ul>
+                        <button class="menu-btn"><img src="../images/ham_btn.png" alt=""></button>
                     </nav>
                 </div>
                 
@@ -109,11 +109,13 @@
                     <li class="step-blue">4. 가입완료</li>
                 </ul>
 
-                <img src="../images/join-complete.png" alt="" class="join-complete">
+                <img src="../images/join-complete.png" alt="회원가입이 성공적으로 완료되었습니다. 로그인 후 다양한 온라인청년센터 서비스를 이용하시기 바랍니다." class="join-complete">
 
                 <div class="member-info-area">
-                    <h3>가입회원정보</h3>
-                    <button class="info-change"><a href="#none">회원정보수정</a></button>
+                    <div class="sub-tit-box">
+                        <h3>가입회원정보</h3>
+                        <button class="info-change"><a href="#none">회원정보수정</a></button>
+                    </div>
                     <div class="member-info">
                         <ul class="row-1">
                             <li>
@@ -147,8 +149,8 @@
                 </div>
 
                 <div class="btn-box">
-                    <button><a href="#none">가입취소</a></button>
-                    <button class="blue-btn"><a href="#none">다음단계</a></button>
+                    <a href="#none" class="btn-solid">로그인</a>
+                    <a href="#none" class="btn-solid-blue">메인 홈</a>
                 </div>
             </div>
         </div>
@@ -156,16 +158,14 @@
         <!-- footer -->
         <footer>
             <div class="inner">
+                <img src="../images/foot_logo.png" alt="로고이미지" class="footer-logo-1">
                 <ul class="footer-info">
                     <li>
-                        <img src="../images/foot_logo.png" alt="" class="footer-logo">
-                    </li>
-                    <li>
                         <span>CONTACT US</span>
-                        <ul>
-                            <li>27740 충청북도 음성군 맹동면 태정로6 <br>한국고용정보원</li>
-                            <li>온라인청년센터 시스템관련문의 <br> <a href="#none">work.kr/kakaoyouths</a></li>
-                        </ul>
+                        <p>27740 충청북도 음성군 맹동면 태정로6 </p>
+                        <p>한국고용정보원</p>
+                        <p>온라인청년센터 시스템관련문의</p>
+                        <p><a href="#none">work.kr/kakaoyouths</a></p>                        
                     </li>
                     <li>
                         <span>SNS</span>
@@ -177,13 +177,11 @@
                         </ul>
                     </li>
                     <li>
-                        <span>온라인청년센터 소개</span>
-                        <ul>
-                            <li><a href="#none">이용약관</a></li>
-                            <li><a href="#none">개인정보처리방침</a></li>
-                            <li><a href="#none">찾아오시는길</a></li>
-                            <li><a href="#none">오픈API</a></li>
-                        </ul>
+                        <a href="#none">온라인청년센터 소개</a>
+                        <a href="#none">이용약관</a>
+                        <a href="#none">개인정보처리방침</a>
+                        <a href="#none">찾아오시는길</a>
+                        <a href="#none">오픈API</a>
                     </li>
                     <li>
                         <span>관련사이트</span>
@@ -195,10 +193,8 @@
                             </select>
                         </form>
                     </li>
-                    <li>
-                        <img src="../images/foot_logo.png" alt="">
-                    </li>
                 </ul>
+                <img src="../images/foot_logo.png" alt="로고이미지" class="footer-logo-2">
             </div>
         </footer>
     </div>

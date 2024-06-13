@@ -3,16 +3,11 @@
 }
 .container .contents .txt-box {
   height: 157px;
-  padding: 29px 0 41px 52px;
-  color: #555555;
 }
 .container .contents .txt-box span {
   color: #FF2E00;
 }
-.container .contents > div {
-  margin-top: 60px;
-}
-.container .contents > div #infoInput input {
+.container .contents > div .info-input input {
   padding-left: 30px;
   height: 80px;
   font-size: 24px;
@@ -20,13 +15,18 @@
   border: 1px solid #A5A5A5;
   box-sizing: border-box;
 }
-.container .contents > div #infoInput input::-moz-placeholder {
+.container .contents > div .info-input input::-moz-placeholder {
+  position: relative;
   color: #666666;
 }
-.container .contents > div #infoInput input::placeholder {
+.container .contents > div .info-input input::placeholder {
+  position: relative;
   color: #666666;
 }
-.container .contents > div #infoInput button {
+.container .contents > div .info-input input:focus {
+  outline: none;
+}
+.container .contents > div .info-input button {
   padding: 0;
   width: 203px;
   height: 80px;
@@ -34,6 +34,9 @@
   background-color: #0162B1;
   font-size: 24px;
   color: #FFFFFF;
+}
+.container .contents .member-info {
+  margin-top: 60px;
 }
 .container .contents .member-info .id-box {
   display: flex;
@@ -57,6 +60,9 @@
 .container .contents .member-info input {
   width: 100%;
 }
+.container .contents .contact-info {
+  margin-top: 60px;
+}
 .container .contents .contact-info input {
   margin-bottom: 40px;
   width: 100%;
@@ -78,6 +84,9 @@
 .container .contents .contact-info .bg-1 {
   background-color: #F5F5F5;
 }
+.container .contents .reception-info {
+  margin-top: 60px;
+}
 .container .contents .reception-info > div {
   margin-top: 40px;
 }
@@ -97,17 +106,17 @@
   font-size: 16px;
   color: #FF2E00;
 }
-.container .contents .reception-info > div #recept {
+.container .contents .reception-info > div .recept {
   margin-top: 20px;
 }
-.container .contents .reception-info > div #recept fieldset {
+.container .contents .reception-info > div .recept fieldset {
   display: flex;
   justify-content: space-between;
 }
-.container .contents .reception-info > div #recept fieldset input {
+.container .contents .reception-info > div .recept fieldset input {
   display: none;
 }
-.container .contents .reception-info > div #recept fieldset label {
+.container .contents .reception-info > div .recept fieldset label {
   display: inline-block;
   width: 634px;
   height: 80px;
@@ -119,7 +128,7 @@
   line-height: 80px;
   cursor: pointer;
 }
-.container .contents .reception-info > div #recept fieldset input:checked + label {
+.container .contents .reception-info > div .recept fieldset input:checked + label {
   border-color: #0162B1;
   background-color: #E9F5FF;
   color: #0162B1;

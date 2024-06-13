@@ -1,14 +1,10 @@
 .container{
 
-    .contents{ width: 1280px; margin: 0 auto;
+    .contents{
 
         .step-box::before{background: url("../images/stepbox_2.png") no-repeat center;}
         
-        .txt-box{margin-top: 40px; padding: 33px 0 33px 67px; border: 1px solid #BFBFBF;  border-radius: 2px; background: #F6F6F6; line-height: 28.8px; color: #555555; box-sizing: border-box;
-        
-            >li{position: relative;}
-            >li::before{position: absolute; left: -15px; top: 50%; transform: translateY(-50%); content: ''; width: 4px; height: 4px; border-radius: 50%; background-color: #555555;}
-        }
+        .txt-box{height: 241px;}
 
         h3{position: relative; margin: 60px 0 20px 30px; font-size: 28px; font-weight: 700; color: #444444;
             &::before{position: absolute; left: -15px; top: 50%; transform: translateY(-50%); width: 6px; height: 6px; border-radius: 50%; background-color: #444444; content: '';}
@@ -35,11 +31,6 @@
                 }
                 
             }
-        }
-
-        .btn-box{width: 576px; margin: 0 auto;
-            button{width: 280px; height: 82px; margin: 80px 0 100px 0; border-color: transparent; border-radius: 2px; background-color:#6B6B6B ; font-size: 24px; color: #fff; cursor: pointer;}
-            button.blue-btn{margin: 0 0 0 12px; background-color: #0162B1;}
         }
     }
 }
