@@ -489,6 +489,12 @@ footer .inner .footer-logo-2 {
     font-size: 12px;
     line-height: 25px;
   }
+  footer .inner .footer-info li .footer-sns {
+    display: flex;
+    flex-wrap: wrap;
+    width: 150px;
+    border: 1px solid black;
+  }
   footer .inner .footer-info li .footer-sns li {
     width: 45px;
     height: 45px;
