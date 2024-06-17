@@ -1,5 +1,5 @@
 .container .contents .txt-box {
-  height: 240px;
+  padding: 33px 67px;
 }
 .container .contents .login-find {
   display: flex;
@@ -51,4 +51,31 @@
   align-items: center;
   line-height: 80px;
   color: #999999;
+}
+
+@media all and (min-width: 769px) and (max-width: 1024px) { /*769px ~ 1024px*/
+  .contents .login-find {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contents .login-find .pw-find {
+    margin-top: 60px;
+    width: 100%;
+  }
+  .contents .login-find .pw-find::before {
+    display: none;
+  }
+}
+@media all and (max-width: 768px) { /* ~ 768px*/
+  .contents .login-find {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contents .login-find .pw-find {
+    margin-top: 60px;
+    width: 100%;
+  }
+  .contents .login-find .pw-find::before {
+    display: none;
+  }
 }

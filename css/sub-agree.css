@@ -1,11 +1,11 @@
 @charset "UTF-8";
-.container .contents .step-box::before {
+.step-box::before {
   background: url("../images/stepbox_1.png") no-repeat center;
 }
-.container .contents .txt-box {
-  height: 182px;
+
+.txt-box {
   margin-top: 40px;
-  padding: 33px 0 0 67px;
+  padding: 33px 67px;
   border: 1px solid #BFBFBF;
   border-radius: 2px;
   background: #F6F6F6;
@@ -13,10 +13,10 @@
   color: #555555;
   box-sizing: border-box;
 }
-.container .contents .txt-box > li {
+.txt-box > li {
   position: relative;
 }
-.container .contents .txt-box > li::before {
+.txt-box > li::before {
   position: absolute;
   left: -15px;
   top: 50%;
@@ -27,19 +27,20 @@
   border-radius: 50%;
   background-color: #555555;
 }
-.container .contents .terms-accordion {
+
+.terms-accordion {
   margin-top: 40px;
   border-radius: 2px;
   background-color: #FAFAFA;
   box-sizing: border-box;
 }
-.container .contents .terms-accordion > li {
+.terms-accordion > li {
   position: relative;
   box-sizing: border-box;
   border-left: 1px solid #BFBFBF;
   border-right: 1px solid #BFBFBF;
 }
-.container .contents .terms-accordion > li.all-agree-box {
+.terms-accordion > li.all-agree-box {
   position: relative;
   height: 100px;
   padding-left: 41px;
@@ -52,25 +53,25 @@
   color: #707070;
   /*전체 동의가 액티브 됐을 때*/
 }
-.container .contents .terms-accordion > li.all-agree-box.active {
+.terms-accordion > li.all-agree-box.active {
   border-color: #0162B1;
   background-color: #F3FAFF;
   color: #0162B1;
   box-sizing: border-box;
 }
-.container .contents .terms-accordion > li.all-agree-box.active label::before {
+.terms-accordion > li.all-agree-box.active label::before {
   background: url("../images/ico_check2.png") no-repeat center;
 }
-.container .contents .terms-accordion > li.all-agree-box .all-agree {
+.terms-accordion > li.all-agree-box .all-agree {
   display: none;
 }
-.container .contents .terms-accordion > li.all-agree-box label {
+.terms-accordion > li.all-agree-box label {
   display: block;
   width: 100%;
   height: 100%;
   cursor: pointer;
 }
-.container .contents .terms-accordion > li.all-agree-box label::before {
+.terms-accordion > li.all-agree-box label::before {
   display: inline-block;
   position: absolute;
   right: 40px;
@@ -81,17 +82,17 @@
   background: url("../images/ico_check.png") no-repeat center;
   content: "";
 }
-.container .contents .terms-accordion > li.all-agree-box::before {
+.terms-accordion > li.all-agree-box::before {
   display: none;
 }
-.container .contents .terms-accordion > li .tit-box {
+.terms-accordion > li .tit-box {
   position: relative;
   height: 60px;
   padding-left: 62px;
   border-bottom: 1px solid #BFBFBF;
   line-height: 60px;
 }
-.container .contents .terms-accordion > li .tit-box::before {
+.terms-accordion > li .tit-box::before {
   position: absolute;
   left: 41px;
   top: 50%;
@@ -102,16 +103,16 @@
   background-color: #444444;
   content: "";
 }
-.container .contents .terms-accordion > li .tit-box h3 {
+.terms-accordion > li .tit-box h3 {
   position: relative;
   font-size: 20px;
   font-weight: 350;
   color: #444444;
 }
-.container .contents .terms-accordion > li .tit-box h3 span {
+.terms-accordion > li .tit-box h3 span {
   color: #0162B1;
 }
-.container .contents .terms-accordion > li .txt {
+.terms-accordion > li .txt {
   overflow-y: scroll;
   height: 200px;
   padding: 10px 30px;
@@ -121,18 +122,17 @@
   line-height: 22.4px;
   box-sizing: border-box;
 }
-.container .contents .terms-accordion > li .txt::-webkit-scrollbar {
+.terms-accordion > li .txt::-webkit-scrollbar {
   width: 4px;
 }
-.container .contents .terms-accordion > li .txt::-webkit-scrollbar-thumb {
+.terms-accordion > li .txt::-webkit-scrollbar-thumb {
   height: 76px;
   border-radius: 2px;
   background: rgba(35, 35, 35, 0.4);
 }
-.container .contents .terms-accordion > li .agree-box {
+.terms-accordion > li .agree-box {
   position: relative;
-  height: 80px;
-  padding: 14px 0 0 42px;
+  padding: 14px 42px;
   border-bottom: 1px solid #BFBFBF;
   background-color: #FAFAFA;
   color: #666666;
@@ -140,7 +140,7 @@
   vertical-align: middle;
   box-sizing: border-box;
 }
-.container .contents .terms-accordion > li .agree-box .check-box {
+.terms-accordion > li .agree-box .check-box {
   position: absolute;
   right: 30px;
   top: 50%;
@@ -149,13 +149,13 @@
   font-weight: 350;
   color: #949494;
 }
-.container .contents .terms-accordion > li .agree-box .check-box input {
+.terms-accordion > li .agree-box .check-box input {
   display: none;
 }
-.container .contents .terms-accordion > li .agree-box .check-box label {
+.terms-accordion > li .agree-box .check-box label {
   cursor: pointer;
 }
-.container .contents .terms-accordion > li .agree-box .check-box label::before {
+.terms-accordion > li .agree-box .check-box label::before {
   display: inline-block;
   width: 14.62px;
   height: 12.74px;
@@ -163,30 +163,42 @@
   background: url("../images/ico_select.png") no-repeat center;
   content: "";
 }
-.container .contents .terms-accordion > li .agree-box .check-box input:checked + label {
+.terms-accordion > li .agree-box .check-box input:checked + label {
   color: #0162B1;
 }
-.container .contents .terms-accordion > li .agree-box .check-box input:checked + label::before {
+.terms-accordion > li .agree-box .check-box input:checked + label::before {
   background: url("../images/ico_select2.png") no-repeat center;
 }
-.container .contents .terms-accordion .terms-2 .agree-box {
+.terms-accordion .terms-2 .agree-box {
   height: 60px;
   padding-top: 18px;
 }
-.container .contents .terms-accordion .terms-3 .txt {
+.terms-accordion .terms-3 .txt {
   overflow-y: visible;
   height: 58px;
   padding-top: 0;
   line-height: 58px;
 }
-.container .contents .terms-accordion .terms-3 .agree-box {
+.terms-accordion .terms-3 .agree-box {
   height: 64px;
   padding-top: 20px;
 }
-.container .contents .terms-accordion .terms-4 .txt {
+.terms-accordion .terms-4 .txt {
   height: 89px;
   padding-top: 20px;
   border-radius: 0 0 2px 2px;
   line-height: 25.6px;
   vertical-align: middle;
+}
+
+/*반응형*/
+@media all and (min-width: 769px) and (max-width: 1024px) { /*769px ~ 1024px*/
+  .contents .agree-box li {
+    width: 85%;
+  }
+}
+@media all and (max-width: 768px) { /* ~ 768px*/
+  .contents .agree-box li {
+    width: 78%;
+  }
 }

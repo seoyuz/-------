@@ -1,10 +1,6 @@
-.container{
+.step-box::before{background: url("../images/stepbox_1.png") no-repeat center;}
 
-    .contents{
-    
-        .step-box::before{background: url("../images/stepbox_1.png") no-repeat center;}
-
-        .txt-box{height: 182px; margin-top: 40px; padding: 33px 0 0 67px; border: 1px solid #BFBFBF;  border-radius: 2px; background: #F6F6F6; line-height: 28.8px; color: #555555; box-sizing: border-box;
+        .txt-box{ margin-top: 40px; padding: 33px 67px; border: 1px solid #BFBFBF;  border-radius: 2px; background: #F6F6F6; line-height: 28.8px; color: #555555; box-sizing: border-box;
         
             >li{position: relative;}
             >li::before{position: absolute; left: -15px; top: 50%; transform: translateY(-50%); content: ''; width: 4px; height: 4px; border-radius: 50%; background-color: #555555;}
@@ -40,7 +36,7 @@
                     &::-webkit-scrollbar-thumb{height: 76px; border-radius: 2px; background: #23232366;}
                 }
 
-                .agree-box{position: relative; height: 80px; padding: 14px 0 0 42px; border-bottom: 1px solid #BFBFBF; background-color: #FAFAFA; color: #666666; line-height: 25.6px; vertical-align: middle; box-sizing: border-box;
+                .agree-box{position: relative; padding: 14px 42px; border-bottom: 1px solid #BFBFBF; background-color: #FAFAFA; color: #666666; line-height: 25.6px; vertical-align: middle; box-sizing: border-box;
                     .check-box{position: absolute; right: 30px; top: 50%; transform: translateY(-50%); font-size: 20px; font-weight: 350; color: #949494; 
                         input{display: none;}
                         label{cursor: pointer;}
@@ -61,6 +57,21 @@
             .terms-4{
                 .txt{height: 89px; padding-top: 20px; border-radius: 0 0 2px 2px; line-height: 25.6px; vertical-align: middle;}
             }
+        }
+
+/*반응형*/
+@media all and (min-width:769px) and (max-width: 1024px){ /*769px ~ 1024px*/
+    .contents{
+        .agree-box{
+            li{width: 85%;}
+        }
+    }
+}
+
+@media all and (max-width:768px) { /* ~ 768px*/
+    .contents{
+        .agree-box{
+            li{width: 78%;}
         }
     }
 }

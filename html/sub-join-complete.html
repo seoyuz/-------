@@ -6,6 +6,8 @@
     <title>가입완료</title>
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/sub-join-complete.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/common.js"></script>
 </head>
 <body>
     <div id="wrap" class="main">
@@ -95,7 +97,86 @@
                 </div>
                 
             </div>
+            <button class="menu-mobile-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="header-mobile-wrap">
+                <div class="header-mobile">
+                    <ul class="login-mobile">
+                        <li><a href="#none">로그인</a></li>
+                        <li><a href="#none">회원가입</a></li>
+                    </ul>
+                    <ul class="gnb-mobile">
+                        <li class="depth1">
+                            <a href="#none">청년정책
+                                <img src="../images/ico_more.png" alt="열기">
+                            </a>
+                        
+                            <ul class="depth2">
+                                <li><a href="#none">depth2-1</a></li>
+                                <li><a href="#none">depth2-2</a></li>
+                                <li><a href="#none">depth2-3</a></li>
+                            </ul>
+                        </li>
+                        <li class="depth1">
+                            <a href="#none">청년공간
+                                <img src="../images/ico_more.png"  alt="열기">
+                            </a>
+                            <ul class="depth2">
+                                <li><a href="#none">depth2-1</a></li>
+                                <li><a href="#none">depth2-2</a></li>
+                                <li><a href="#none">depth2-3</a></li>
+                            </ul>
+                        </li>
+                        <li class="depth1">
+                            <a href="#none">청년상담실
+                                <img src="../images/ico_more.png"  alt="열기">
+                            </a>
+                            <ul class="depth2">
+                                <li><a href="#none">depth2-1</a></li>
+                                <li><a href="#none">depth2-2</a></li>
+                                <li><a href="#none">depth2-3</a></li>
+                            </ul>
+                        </li>
+                        <li class="depth1">
+                            <a href="#none">청년소식
+                                <img src="../images/ico_more.png"  alt="열기">
+                            </a>
+                            <ul class="depth2">
+                                <li><a href="#none">depth2-1</a></li>
+                                <li><a href="#none">depth2-2</a></li>
+                                <li><a href="#none">depth2-3</a></li>
+                            </ul>
+                        </li>
+                        <li class="depth1">
+                            <a href="#none">청년구직활동
+                                <img src="../images/ico_more.png"  alt="열기">
+                            </a>
+                            <ul class="depth2">
+                                <li><a href="#none">depth2-1</a></li>
+                                <li><a href="#none">depth2-2</a></li>
+                                <li><a href="#none">depth2-3</a></li>
+                            </ul>
+                        </li>
+                        <li class="depth1">
+                            <a href="#none">소개
+                                <img src="../images/ico_more.png" alt="열기">
+                            </a>
+                            <ul class="depth2">
+                                <li><a href="#none">depth2-1</a></li>
+                                <li><a href="#none">depth2-2</a></li>
+                                <li><a href="#none">depth2-3</a></li>
+                            </ul>
+                        </li>
+                </ul>
+
+                </div>
+            </div>
         </header>
+        <!-- // header -->
 
         <!--main-->
         <div class="container">
@@ -117,34 +198,20 @@
                         <button class="info-change"><a href="#none">회원정보수정</a></button>
                     </div>
                     <div class="member-info">
-                        <ul class="row-1">
-                            <li>
-                                <ul class="row-2">
-                                    <li class="info-txt">아이디</li>
-                                    <li class="user-txt">qwera123</li>
-                                </ul>
-                            </li>
-                            <li>
-                                <ul class="row-2">
-                                    <li class="info-txt">휴대전화번호</li>
-                                    <li class="user-txt">010-1234-5678</li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <ul class="row-1">
-                            <li>
-                                <ul class="row-2">
-                                    <li class="info-txt">성명</li>
-                                    <li class="user-txt">홍길동</li>
-                                </ul>
-                            </li>
-                            <li>
-                                <ul class="row-2">
-                                    <li class="info-txt">이메일</li>
-                                    <li class="user-txt">qwera123@naver.com</li>
-                                </ul>
-                            </li>
-                        </ul>
+                        <table>
+                            <tr>
+                                <td>아이디</th>
+                                <td>qwera123</td>
+                                <td>휴대전화번호</th>
+                                <td>010-1234-5678</td>
+                            </tr>
+                            <tr>
+                                <td>성명</th>
+                                <td>홍길동</td>
+                                <td>이메일</th>
+                                <td>qwera123@naver.com</td>
+                            </tr>
+                        </table>
                     </div>                    
                 </div>
 
@@ -154,11 +221,12 @@
                 </div>
             </div>
         </div>
+        <!-- // main -->
 
         <!-- footer -->
         <footer>
             <div class="inner">
-                <img src="../images/foot_logo.png" alt="로고이미지" class="footer-logo-1">
+                <img src="../images/foot_logo.png" alt="온라인청년센터 CI" class="footer-logo-1">
                 <ul class="footer-info">
                     <li>
                         <span>CONTACT US</span>
@@ -197,6 +265,7 @@
                 <img src="../images/foot_logo.png" alt="로고이미지" class="footer-logo-2">
             </div>
         </footer>
+        <!-- // footer -->
     </div>
 </body>
 </html>

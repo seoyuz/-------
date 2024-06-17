@@ -105,10 +105,7 @@
 /*반응형*/
 @media all and (min-width: 769px) and (max-width: 1024px) { /*769px ~ 1024px*/
   .contents {
-    width: 850px;
-  }
-  .contents h2 {
-    margin-bottom: 40px;
+    border: 1px solid red;
   }
   .contents .sub-tit-box {
     margin: 0 auto;
@@ -125,12 +122,7 @@
 }
 @media all and (max-width: 768px) { /* ~ 768px*/
   .contents {
-    width: 680px;
     border: 1px solid red;
-  }
-  .contents h2 {
-    margin-bottom: 40px;
-    font-size: 40px;
   }
   .contents .sub-tit-box {
     margin: 0 auto;

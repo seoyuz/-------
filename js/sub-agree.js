@@ -18,7 +18,7 @@ $(function() {
             $(".btn-box .blue-btn").text("로그인"); /*일단은 텍스트만 변경되게 해놓음*/
         }
 
-        /*$(".btn-box").find(".blue-btn").prop('href', 변경할 값); <-a태그 변경*/ 
+        /* $(".btn-box").find(".blue-btn").prop('href', 변경할 값); <-a태그 변경 */ 
         // $(".btn-box").find(".blue-btn").text("다음단계"); /*일단은 텍스트만 변경되게 해놓음*/
     });
 
