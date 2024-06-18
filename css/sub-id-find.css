@@ -8,7 +8,8 @@
   margin-top: 80px;
 }
 .container .contents .login-find > div {
-  width: 610px;
+  width: 45%;
+  max-width: 610px;
 }
 .container .contents .login-find > div h3 {
   margin-bottom: 18px;
@@ -28,7 +29,7 @@
   content: "";
 }
 .container .contents .login-find .pw-find #idBox {
-  width: 610px;
+  width: 100%;
   height: 80px;
   margin-bottom: 18px;
   padding-left: 43px;
@@ -54,28 +55,60 @@
 }
 
 @media all and (min-width: 769px) and (max-width: 1024px) { /*769px ~ 1024px*/
-  .contents .login-find {
+  .container .contents .login-find {
     flex-direction: column;
     align-items: center;
   }
-  .contents .login-find .pw-find {
-    margin-top: 60px;
+  .container .contents .login-find > div {
     width: 100%;
   }
-  .contents .login-find .pw-find::before {
+  .container .contents .login-find .pw-find {
+    margin-top: 60px;
+  }
+  .container .contents .login-find .pw-find::before {
     display: none;
   }
 }
-@media all and (max-width: 768px) { /* ~ 768px*/
-  .contents .login-find {
+@media all and (min-width: 361px) and (max-width: 768px) { /* ~ 768px*/
+  .container .contents .login-find {
     flex-direction: column;
     align-items: center;
   }
-  .contents .login-find .pw-find {
-    margin-top: 60px;
+  .container .contents .login-find > div {
     width: 100%;
   }
-  .contents .login-find .pw-find::before {
+  .container .contents .login-find .pw-find {
+    margin-top: 60px;
+  }
+  .container .contents .login-find .pw-find::before {
     display: none;
+  }
+}
+@media all and (max-width: 360px) { /* ~ 360px mobile*/
+  .container .contents {
+    width: 80%;
+  }
+  .container .contents .txt-box {
+    padding: 33px 25px 33px 40px;
+  }
+  .container .contents .login-find {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+  }
+  .container .contents .login-find > div {
+    width: 100%;
+  }
+  .container .contents .login-find .pw-find {
+    margin-top: 50px;
+  }
+  .container .contents .login-find .pw-find::before {
+    display: none;
+  }
+  .container .contents .login-find .btn-box {
+    flex-wrap: wrap;
+  }
+  .container .contents .login-find .btn-box a {
+    font-size: 16px;
   }
 }

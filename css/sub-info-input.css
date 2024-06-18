@@ -1,11 +1,41 @@
 @charset "UTF-8";
-.contents .step-box::before {
-  background: url(../images/stepbox_3.png) no-repeat center;
+.container .contents .step-box {
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  height: 100px;
+  border-radius: 2px;
+  background-color: #FAFAFA;
+  font-size: 24px;
+  color: #666666;
+  box-sizing: border-box;
 }
-.contents .txt-box span {
+.container .contents .step-box li {
+  position: relative;
+  width: 320px;
+  border-top: 1px solid #AEAEAE;
+  border-bottom: 1px solid #AEAEAE;
+  line-height: 100px;
+  text-align: center;
+}
+.container .contents .step-box li:last-child::before {
+  display: none;
+}
+.container .contents .step-box li:nth-child(2)::before, .container .contents .step-box li:nth-child(3)::before {
+  background-color: #0162B1;
+}
+.container .contents .step-box .step-blue {
+  position: relative;
+  border-top: 1px solid #0162B1;
+  border-bottom: 1px solid #0162B1;
+  border-right: none;
+  background-color: #E9F5FF;
+  color: #0162B1;
+}
+.container .contents .txt-box span {
   color: #FF2E00;
 }
-.contents > div .info-input input {
+.container .contents > div .info-input input {
   padding-left: 30px;
   height: 80px;
   font-size: 24px;
@@ -13,18 +43,18 @@
   border: 1px solid #A5A5A5;
   box-sizing: border-box;
 }
-.contents > div .info-input input::-moz-placeholder {
+.container .contents > div .info-input input::-moz-placeholder {
   position: relative;
   color: #666666;
 }
-.contents > div .info-input input::placeholder {
+.container .contents > div .info-input input::placeholder {
   position: relative;
   color: #666666;
 }
-.contents > div .info-input input:focus {
+.container .contents > div .info-input input:focus {
   outline: none;
 }
-.contents > div .info-input button {
+.container .contents > div .info-input button {
   padding: 0;
   width: 203px;
   height: 80px;
@@ -33,62 +63,62 @@
   font-size: 24px;
   color: #FFFFFF;
 }
-.contents .member-info {
+.container .contents .member-info {
   margin-top: 60px;
 }
-.contents .member-info .id-box {
+.container .contents .member-info .id-box {
   display: flex;
   justify-content: space-between;
   height: 80px;
 }
-.contents .member-info .id-box .id-input {
+.container .contents .member-info .id-box .id-input {
   width: 1065px;
 }
-.contents .member-info .id-box p {
+.container .contents .member-info .id-box p {
   display: block;
 }
-.contents .member-info p {
+.container .contents .member-info p {
   margin: 20px 0 40px 0;
   font-size: 18px;
   color: #666666;
 }
-.contents .member-info p span {
+.container .contents .member-info p span {
   color: #FF2E00;
 }
-.contents .member-info input {
+.container .contents .member-info input {
   width: 100%;
 }
-.contents .contact-info {
+.container .contents .contact-info {
   margin-top: 60px;
 }
-.contents .contact-info input {
+.container .contents .contact-info input {
   margin-bottom: 40px;
   width: 100%;
   border-radius: 2px;
 }
-.contents .contact-info input:last-child {
+.container .contents .contact-info input:last-child {
   margin-bottom: 0;
 }
-.contents .contact-info .address-box {
+.container .contents .contact-info .address-box {
   display: flex;
   justify-content: space-between;
 }
-.contents .contact-info .address-box .addr-input {
-  width: 724px;
+.container .contents .contact-info .address-box .addr-input {
+  max-width: 724px;
 }
-.contents .contact-info .address-box .post-input {
-  width: 311px;
+.container .contents .contact-info .address-box .post-input {
+  max-width: 311px;
 }
-.contents .contact-info .bg-1 {
+.container .contents .contact-info .bg-1 {
   background-color: #F5F5F5;
 }
-.contents .reception-info {
+.container .contents .reception-info {
   margin-top: 60px;
 }
-.contents .reception-info > div {
+.container .contents .reception-info > div {
   margin-top: 40px;
 }
-.contents .reception-info > div .desc-box {
+.container .contents .reception-info > div .desc-box {
   padding: 18px 0;
   width: 100%;
   background-color: #F8F8F8;
@@ -99,21 +129,21 @@
   text-align: center;
   box-sizing: border-box;
 }
-.contents .reception-info > div .desc-box span {
+.container .contents .reception-info > div .desc-box span {
   font-size: 16px;
   color: #FF2E00;
 }
-.contents .reception-info > div .recept {
+.container .contents .reception-info > div .recept {
   margin-top: 20px;
 }
-.contents .reception-info > div .recept fieldset {
+.container .contents .reception-info > div .recept fieldset {
   display: flex;
   justify-content: space-between;
 }
-.contents .reception-info > div .recept fieldset input {
+.container .contents .reception-info > div .recept fieldset input {
   display: none;
 }
-.contents .reception-info > div .recept fieldset label {
+.container .contents .reception-info > div .recept fieldset label {
   display: inline-block;
   margin: 5px;
   width: 50%;
@@ -127,7 +157,7 @@
   cursor: pointer;
   box-sizing: border-box;
 }
-.contents .reception-info > div .recept fieldset input:checked + label {
+.container .contents .reception-info > div .recept fieldset input:checked + label {
   border-color: #0162B1;
   background-color: #E9F5FF;
   color: #0162B1;
@@ -135,12 +165,12 @@
 
 /*반응형*/
 @media all and (min-width: 769px) and (max-width: 1024px) { /*769px ~ 1024px*/
-  .contents > div .info-input button {
+  .contianer .contents > div .info-input button {
     font-size: 20px;
   }
 }
 @media all and (max-width: 768px) { /* ~ 768px*/
-  .contents > div .info-input button {
+  .contianer .contents > div .info-input button {
     font-size: 16px;
   }
 }

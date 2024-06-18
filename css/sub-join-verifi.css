@@ -1,19 +1,74 @@
 @charset "UTF-8";
-.step-box::before {
-  background: url("../images/stepbox_2.png") no-repeat center;
+.container .contents .step-box {
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  height: 100px;
+  border-radius: 2px;
+  background-color: #FAFAFA;
+  font-size: 24px;
+  color: #666666;
+  box-sizing: border-box;
 }
-
-.id-verifi-wrap {
+.container .contents .step-box li {
+  position: relative;
+  width: 320px;
+  border-top: 1px solid #AEAEAE;
+  border-bottom: 1px solid #AEAEAE;
+  line-height: 100px;
+  text-align: center;
+}
+.container .contents .step-box li:last-child {
+  border-right: 1px solid #AEAEAE;
+}
+.container .contents .step-box li:first-child::before, .container .contents .step-box li:nth-child(3)::before {
+  display: none;
+}
+.container .contents .step-box li:nth-child(2)::before {
+  background-color: #0162B1;
+}
+.container .contents .step-box li::before {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 1px;
+  height: 31.5px;
+  background-color: #D1D1D1;
+  content: "";
+}
+.container .contents .step-box .step-blue {
+  position: relative;
+  border-top: 1px solid #0162B1;
+  border-bottom: 1px solid #0162B1;
+  border-right: none;
+  background-color: #E9F5FF;
+  color: #0162B1;
+}
+.container .contents .step-box .step-blue:first-child {
+  border-left: 1px solid #0162B1;
+}
+.container .contents .step-box .step-blue::after {
+  position: absolute;
+  right: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 100px;
+  background: url("../images/stepbox_2.png") no-repeat center;
+  content: "";
+}
+.container .contents .id-verifi-wrap {
   margin-top: 60px;
 }
-.id-verifi-wrap h3 {
+.container .contents .id-verifi-wrap h3 {
   position: relative;
   margin: 60px 0 20px 30px;
   font-size: 28px;
   font-weight: 700;
   color: #444444;
 }
-.id-verifi-wrap h3::before {
+.container .contents .id-verifi-wrap h3::before {
   position: absolute;
   left: -15px;
   top: 50%;
@@ -24,21 +79,20 @@
   background-color: #444444;
   content: "";
 }
-
-.id-verifi {
+.container .contents .id-verifi {
   padding: 36px 52px;
   border: 1px solid #BFBFBF;
   background-color: #F6F6F6;
   color: #555555;
   box-sizing: border-box;
 }
-.id-verifi ul li {
+.container .contents .id-verifi ul li {
   position: relative;
   margin-left: 30px;
   font-weight: 350;
   line-height: 28.8px;
 }
-.id-verifi ul li::before {
+.container .contents .id-verifi ul li::before {
   position: absolute;
   left: -15px;
   top: 50%;
@@ -49,29 +103,29 @@
   background-color: #444444;
   content: "";
 }
-.id-verifi .verifi-box {
+.container .contents .id-verifi .verifi-box {
   display: flex;
   position: relative;
   justify-content: center;
   gap: 230px;
 }
-.id-verifi .verifi-box > div {
+.container .contents .id-verifi .verifi-box > div {
   width: 416px;
   margin-top: 46px;
 }
-.id-verifi .verifi-box > div .sub-tit-box {
+.container .contents .id-verifi .verifi-box > div .sub-tit-box {
   text-align: center;
 }
-.id-verifi .verifi-box > div .sub-tit-box h4 {
+.container .contents .id-verifi .verifi-box > div .sub-tit-box h4 {
   font-size: 24px;
   font-weight: 700;
   line-height: 38.4px;
 }
-.id-verifi .verifi-box > div .sub-tit-box span {
+.container .contents .id-verifi .verifi-box > div .sub-tit-box span {
   font-size: 20px;
   line-height: 32px;
 }
-.id-verifi .verifi-box > div button {
+.container .contents .id-verifi .verifi-box > div button {
   display: inline-block;
   margin-top: 30px;
   width: 100%;
@@ -82,11 +136,11 @@
   font-weight: 400;
   cursor: pointer;
 }
-.id-verifi .verifi-box > div button.blue-bor-btn {
+.container .contents .id-verifi .verifi-box > div button.blue-bor-btn {
   border-color: #0162B1;
   color: #0162B1;
 }
-.id-verifi .verifi-box > div:last-child::before {
+.container .contents .id-verifi .verifi-box > div:last-child::before {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -98,19 +152,19 @@
 
 /*반응형*/
 @media all and (min-width: 769px) and (max-width: 1024px) { /*769px ~ 1024px*/
-  .contents .id-verifi .verifi-box {
+  .container .contents .id-verifi .verifi-box {
     gap: 100px;
   }
 }
 @media all and (max-width: 768px) { /* ~ 768px*/
-  .contents .id-verifi .verifi-box {
+  .container .contents .id-verifi .verifi-box {
     flex-direction: column;
     gap: 0;
   }
-  .contents .id-verifi .verifi-box > div {
+  .container .contents .id-verifi .verifi-box > div {
     width: 100%;
   }
-  .contents .id-verifi .verifi-box .phone-verifi::before {
+  .container .contents .id-verifi .verifi-box .phone-verifi::before {
     display: none;
   }
 }
