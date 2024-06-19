@@ -1,19 +1,10 @@
 .container{
     .contents{
-       .step-box{display: flex; position: relative; justify-content: space-around; height: 100px; border-radius: 2px; background-color: #FAFAFA; font-size: 24px; color: #666666; box-sizing: border-box;
-        //&::before{position: absolute; left: -1px; top: -1px; /*width: 1280px;*/ height: 100px; /*background: url("../images/stepbox_2.png") no-repeat center;*/ box-sizing: border-box; content: '';}
-
-            li{position: relative; width:(1280px/4); border-top: 1px solid #AEAEAE; border-bottom: 1px solid #AEAEAE; line-height: 100px; text-align: center;
-                &:last-child{border-right: 1px solid #AEAEAE;}
+       .step-box{
+            li{
                 &:first-child::before,&:nth-child(3)::before{display: none;}
                 &:nth-child(2)::before{background-color: #0162B1;}
-                &::before{position: absolute; left: 0; top: 50%; transform: translate(-50%, -50%); width: 1px; height: 31.5px; background-color: #D1D1D1; content: '';}
             }
-            .step-blue{position: relative; border-top:1px solid #0162B1; border-bottom:1px solid #0162B1; border-right: none; background-color: #E9F5FF; color: #0162B1;
-                &:first-child{border-left: 1px solid #0162B1;}
-                &::after{position: absolute; right: -30px; top: 50%; transform: translateY(-50%); width: 30px; height: 100px; background: url("../images/stepbox_2.png") no-repeat center; content: '';}
-            } 
-            
         }
 
         .id-verifi-wrap{margin-top: 60px;
@@ -67,6 +58,21 @@
                 .verifi-box{flex-direction: column; gap: 0;
                     >div{width: 100%;}
                     .phone-verifi::before{display: none;}
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width:360px) { /* ~ 360px mobile*/
+    .container{
+        .contents{
+            .id-verifi{padding: 36px 12px;
+                ul{
+                    li{margin-top: 15px;
+                        &:first-child{margin-top: 0;}
+                        &::before{top: 15px; transform: translateY(0);}
+                    }
                 }
             }
         }

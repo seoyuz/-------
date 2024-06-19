@@ -68,6 +68,9 @@
   .container .contents .login-find .pw-find::before {
     display: none;
   }
+  .container .contents .btn-box {
+    max-width: 100%;
+  }
 }
 @media all and (min-width: 361px) and (max-width: 768px) { /* ~ 768px*/
   .container .contents .login-find {
@@ -82,6 +85,9 @@
   }
   .container .contents .login-find .pw-find::before {
     display: none;
+  }
+  .container .contents .btn-box {
+    max-width: 100%;
   }
 }
 @media all and (max-width: 360px) { /* ~ 360px mobile*/

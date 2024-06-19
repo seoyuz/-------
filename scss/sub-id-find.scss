@@ -33,6 +33,7 @@
                     &::before{display: none;}
                 }
             }
+            .btn-box{max-width: 100%;}
         }
     }
 
@@ -42,11 +43,12 @@
     .container{
         .contents{
             .login-find{flex-direction: column; align-items: center;
-                >div{ width: 100%;}
+                >div{width: 100%; }
                 .pw-find{margin-top: 60px;
                     &::before{display: none;}
                 }
             }
+            .btn-box{max-width: 100%;}
         }
     }
 }

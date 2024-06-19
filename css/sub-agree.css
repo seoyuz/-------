@@ -1,13 +1,4 @@
 @charset "UTF-8";
-.container .contents .step-box {
-  display: flex;
-  position: relative;
-  justify-content: space-around;
-  border-radius: 2px;
-  background-color: #FAFAFA;
-  color: #666666;
-  box-sizing: border-box;
-}
 .container .contents .step-box li:first-child::before, .container .contents .step-box li:nth-child(2)::before {
   display: none;
 }
@@ -48,15 +39,13 @@
   border-right: 1px solid #BFBFBF;
 }
 .container .contents .terms-accordion > li.all-agree-box {
-  position: relative;
-  height: 100px;
-  padding-left: 41px;
+  position: relative; /*height: 100px;*/ /*padding-left: 41px;*/
+  padding: 20px 40px;
   border: 1px solid #BFBFBF;
   border-radius: 2px 2px 0 0;
   background-color: #fff;
   font-size: 24px;
-  font-weight: 400;
-  line-height: 100px;
+  font-weight: 400; /*line-height: 100px;*/
   color: #707070;
   /*전체 동의가 액티브 됐을 때*/
 }
@@ -93,10 +82,8 @@
   display: none;
 }
 .container .contents .terms-accordion > li .tit-box {
-  height: 60px;
-  padding-left: 62px;
+  padding: 20px 60px;
   border-bottom: 1px solid #BFBFBF;
-  line-height: 60px;
 }
 .container .contents .terms-accordion > li .tit-box h3 {
   position: relative;
@@ -127,7 +114,9 @@
   background: rgba(35, 35, 35, 0.4);
 }
 .container .contents .terms-accordion > li .agree-box {
-  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /*position: relative;*/
   padding: 14px 42px;
   border-bottom: 1px solid #BFBFBF;
   background-color: #FAFAFA;
@@ -136,11 +125,10 @@
   vertical-align: middle;
   box-sizing: border-box;
 }
-.container .contents .terms-accordion > li .agree-box .check-box {
-  position: absolute;
-  right: 30px;
-  top: 50%;
-  transform: translateY(-50%);
+.container .contents .terms-accordion > li .agree-box .abcd {
+  display: inline-block;
+}
+.container .contents .terms-accordion > li .agree-box .check-box { /*position: absolute; right: 30px; top: 50%; transform: translateY(-50%);*/
   font-size: 20px;
   font-weight: 350;
   color: #949494;
@@ -165,23 +153,11 @@
 .container .contents .terms-accordion > li .agree-box .check-box input:checked + label::before {
   background: url("../images/ico_select2.png") no-repeat center;
 }
-.container .contents .terms-accordion .terms-2 .agree-box {
-  height: 60px;
-  padding-top: 18px;
-}
 .container .contents .terms-accordion .terms-3 .txt {
-  overflow-y: visible;
-  height: 58px;
-  padding-top: 0;
-  line-height: 58px;
-}
-.container .contents .terms-accordion .terms-3 .agree-box {
-  height: 64px;
-  padding-top: 20px;
+  height: 70px;
 }
 .container .contents .terms-accordion .terms-4 .txt {
-  height: 89px;
-  padding-top: 20px;
+  height: 100px;
   border-radius: 0 0 2px 2px;
   line-height: 25.6px;
   vertical-align: middle;
@@ -189,13 +165,22 @@
 
 /*반응형*/
 @media all and (min-width: 769px) and (max-width: 1024px) { /*769px ~ 1024px*/
-  .container .contents .agree-box li {
-    width: 85%;
+  .container .contents .agree-box {
+    flex-wrap: wrap;
   }
+  .container .contents .agree-box li { /*width: 85%;*/ }
 }
 @media all and (min-width: 361px) and (max-width: 768px) { /* ~ 768px*/
-  .container .contents .agree-box li {
-    width: 78%;
+  .container .contents .terms-accordion > li .agree-box {
+    flex-wrap: wrap;
+    padding: 14px 32px;
+  }
+  .container .contents .terms-accordion > li .agree-box li { /*width: 78%;*/ }
+  .container .contents .terms-accordion > li .agree-box .check-box {
+    font-size: 18px;
+  }
+  .container .contents .terms-accordion > li .tit-box {
+    padding: 20px 40px;
   }
 }
 @media all and (max-width: 360px) { /* ~ 360px mobile*/
@@ -203,24 +188,19 @@
     margin-top: 40px;
     padding: 33px 20px 33px 40px;
   }
-  .container .contents .terms-accordion > li {
-    border: 1px solid red;
-  }
   .container .contents .terms-accordion > li.all-agree-box {
     height: 60px;
-    padding: 0 21px;
+    padding: 0 10px;
     font-size: 18px;
     line-height: 60px;
   }
   .container .contents .terms-accordion > li.all-agree-box label::before {
-    right: 20px;
+    right: 10px;
     width: 20px;
     height: 20px;
   }
-  .container .contents .terms-accordion > li .tit-box {
-    height: 60px;
-    padding-left: 32px;
-    line-height: 60px;
+  .container .contents .terms-accordion > li .tit-box { /*height: 60px;*/
+    padding: 15px 30px; /*line-height: 60px;*/
   }
   .container .contents .terms-accordion > li .tit-box h3 {
     font-size: 16px;
@@ -232,22 +212,10 @@
     line-height: 22.4px;
   }
   .container .contents .terms-accordion > li .agree-box {
-    position: relative;
-    padding: 14px 22px;
-  }
-  .container .contents .terms-accordion > li .agree-box .check-box {
-    position: absolute;
-    left: 22px;
-    bottom: 0;
-    transform: translateY(30%);
-    font-size: 16px;
+    flex-wrap: wrap;
   }
   .container .contents .terms-accordion .terms-1 .agree-box {
-    padding: 4px 22px;
-    height: 190px;
-  }
-  .container .contents .terms-accordion .terms-1 .agree-box .check-box {
-    transform: translateY(70%);
+    padding: 10px 22px; /*height: 190px;*/
   }
   .container .contents .terms-accordion .terms-2 .agree-box {
     padding: 4px 22px;

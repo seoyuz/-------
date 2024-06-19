@@ -1,62 +1,9 @@
 @charset "UTF-8";
-.container .contents .step-box {
-  display: flex;
-  position: relative;
-  justify-content: space-around;
-  height: 100px;
-  border-radius: 2px;
-  background-color: #FAFAFA;
-  font-size: 24px;
-  color: #666666;
-  box-sizing: border-box;
-}
-.container .contents .step-box li {
-  position: relative;
-  width: 320px;
-  border-top: 1px solid #AEAEAE;
-  border-bottom: 1px solid #AEAEAE;
-  line-height: 100px;
-  text-align: center;
-}
-.container .contents .step-box li:last-child {
-  border-right: 1px solid #AEAEAE;
-}
 .container .contents .step-box li:first-child::before, .container .contents .step-box li:nth-child(3)::before {
   display: none;
 }
 .container .contents .step-box li:nth-child(2)::before {
   background-color: #0162B1;
-}
-.container .contents .step-box li::before {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 1px;
-  height: 31.5px;
-  background-color: #D1D1D1;
-  content: "";
-}
-.container .contents .step-box .step-blue {
-  position: relative;
-  border-top: 1px solid #0162B1;
-  border-bottom: 1px solid #0162B1;
-  border-right: none;
-  background-color: #E9F5FF;
-  color: #0162B1;
-}
-.container .contents .step-box .step-blue:first-child {
-  border-left: 1px solid #0162B1;
-}
-.container .contents .step-box .step-blue::after {
-  position: absolute;
-  right: -30px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 30px;
-  height: 100px;
-  background: url("../images/stepbox_2.png") no-repeat center;
-  content: "";
 }
 .container .contents .id-verifi-wrap {
   margin-top: 60px;
@@ -166,5 +113,20 @@
   }
   .container .contents .id-verifi .verifi-box .phone-verifi::before {
     display: none;
+  }
+}
+@media all and (max-width: 360px) { /* ~ 360px mobile*/
+  .container .contents .id-verifi {
+    padding: 36px 12px;
+  }
+  .container .contents .id-verifi ul li {
+    margin-top: 15px;
+  }
+  .container .contents .id-verifi ul li:first-child {
+    margin-top: 0;
+  }
+  .container .contents .id-verifi ul li::before {
+    top: 15px;
+    transform: translateY(0);
   }
 }

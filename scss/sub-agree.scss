@@ -1,11 +1,8 @@
 .container{
     .contents{
-        .step-box{display: flex; position: relative; justify-content: space-around; border-radius: 2px; background-color: #FAFAFA; color: #666666; box-sizing: border-box;
-    
-            li{
+        .step-box li{
                 &:first-child::before,&:nth-child(2)::before{display: none;}
-            }   
-        }
+            }
 
         .txt-box{ margin-top: 40px; padding: 33px 67px; border: 1px solid #BFBFBF;  border-radius: 2px; background: #F6F6F6; line-height: 28.8px; color: #555555; box-sizing: border-box;
 
@@ -16,7 +13,7 @@
         .terms-accordion{margin-top: 40px;  border-radius: 2px; background-color: #FAFAFA; box-sizing: border-box;
             
             >li{position: relative; box-sizing: border-box; border-left: 1px solid #BFBFBF; border-right: 1px solid #BFBFBF;
-                &.all-agree-box{position: relative; height: 100px; padding-left: 41px; border: 1px solid #BFBFBF; border-radius: 2px 2px 0 0; background-color: #fff; font-size: 24px; font-weight: 400; line-height: 100px; color: #707070;
+                &.all-agree-box{position: relative; /*height: 100px;*/ /*padding-left: 41px;*/ padding: 20px 40px; border: 1px solid #BFBFBF; border-radius: 2px 2px 0 0; background-color: #fff; font-size: 24px; font-weight: 400; /*line-height: 100px;*/ color: #707070;
                     /*전체 동의가 액티브 됐을 때*/
                     &.active{border-color: #0162B1; background-color: #F3FAFF; color: #0162B1; box-sizing: border-box;
                         label::before{background: url("../images/ico_check2.png") no-repeat center;}                
@@ -25,12 +22,11 @@
                     .all-agree{display: none;}
                     label{display: block; width: 100%; height: 100%; cursor: pointer;}
                     label::before{display: inline-block; position: absolute; right: 40px; top: 50%; transform: translateY(-50%); width: 40px; height: 40px; background: url("../images/ico_check.png") no-repeat center; content: '';}
-                    // .all-agree:checked + label::before{background: url("../images/ico_check2.png") no-repeat center;}
 
                     &::before{display: none;}
                 }
 
-                .tit-box{height: 60px; padding-left: 62px; border-bottom: 1px solid #BFBFBF; line-height: 60px;
+                .tit-box{padding:20px 60px; border-bottom: 1px solid #BFBFBF; 
 
                     h3{position: relative; margin: 0; font-size: 20px; font-weight: 350; color: #444444;
                         span{color: #0162B1;}
@@ -42,8 +38,9 @@
                     &::-webkit-scrollbar-thumb{height: 76px; border-radius: 2px; background: #23232366;}
                 }
 
-                .agree-box{position: relative; padding: 14px 42px; border-bottom: 1px solid #BFBFBF; background-color: #FAFAFA; color: #666666; line-height: 25.6px; vertical-align: middle; box-sizing: border-box;
-                    .check-box{position: absolute; right: 30px; top: 50%; transform: translateY(-50%); font-size: 20px; font-weight: 350; color: #949494; 
+                .agree-box{display: flex; justify-content: space-between; align-items: center;/*position: relative;*/ padding: 14px 42px; border-bottom: 1px solid #BFBFBF; background-color: #FAFAFA; color: #666666; line-height: 25.6px; vertical-align: middle; box-sizing: border-box;
+                    .abcd{display: inline-block;}
+                    .check-box{/*position: absolute; right: 30px; top: 50%; transform: translateY(-50%);*/ font-size: 20px; font-weight: 350; color: #949494;
                         input{display: none;}
                         label{cursor: pointer;}
                         label::before{display: inline-block; width: 14.62px; height: 12.74px; margin-right: 8.5px; background: url("../images/ico_select.png") no-repeat center; content: '';}
@@ -53,15 +50,12 @@
                 }
             }
 
-            .terms-2{
-                .agree-box{height: 60px; padding-top: 18px;}
-            }
+            .terms-2{}
             .terms-3{
-                .txt{overflow-y: visible; height: 58px; padding-top: 0; line-height: 58px;}
-                .agree-box{height: 64px; padding-top: 20px;}
+                .txt{height: 70px;}
             }
             .terms-4{
-                .txt{height: 89px; padding-top: 20px; border-radius: 0 0 2px 2px; line-height: 25.6px; vertical-align: middle;}
+                .txt{height: 100px; border-radius: 0 0 2px 2px; line-height: 25.6px; vertical-align: middle;}
             }
         } 
     }
@@ -73,8 +67,8 @@
 @media all and (min-width:769px) and (max-width: 1024px){ /*769px ~ 1024px*/
     .container{
         .contents{
-            .agree-box{
-                li{width: 85%;}
+            .agree-box{flex-wrap: wrap;
+                li{/*width: 85%;*/}
             }
         }        
     }
@@ -84,9 +78,16 @@
 @media all and (min-width:361px)  and (max-width:768px) { /* ~ 768px*/
     .container{
         .contents{
-            .agree-box{
-                li{width: 78%;}
+            .terms-accordion{
+                >li{
+                    .agree-box{flex-wrap: wrap; padding: 14px 32px;
+                        li{/*width: 78%;*/}
+                        .check-box{font-size: 18px;}
+                    }
+                    .tit-box{padding: 20px 40px;}
+                }
             }
+
         }
     }
 }
@@ -96,24 +97,21 @@
         .contents{
             .txt-box{ margin-top: 40px; padding: 33px 20px 33px 40px;}
             .terms-accordion{
-                >li{border: 1px solid red;
-                    &.all-agree-box{height: 60px; padding: 0 21px; font-size: 18px; line-height: 60px;
-                        label::before{right: 20px; width: 20px; height: 20px;}
+                >li{
+                    &.all-agree-box{height: 60px; padding: 0 10px; font-size: 18px; line-height: 60px;
+                        label::before{right: 10px; width: 20px; height: 20px;}
                     }
     
-                    .tit-box{height: 60px; padding-left: 32px; line-height: 60px;
+                    .tit-box{/*height: 60px;*/ padding:15px 30px; /*line-height: 60px;*/
                         h3{font-size: 16px;} 
                     }
     
                     .txt{padding: 10px 20px; height: 200px; font-size: 14px; line-height: 22.4px;}
-    
-                    .agree-box{position: relative; padding: 14px 22px;
-                        .check-box{position: absolute; left: 22px; bottom: 0; transform: translateY(30%); font-size: 16px;}
-                    }
+                    .agree-box{flex-wrap: wrap;}
                 }
                 .terms-1{
-                    .agree-box{padding: 4px 22px; height: 190px;
-                        .check-box{transform: translateY(70%);}
+                    .agree-box{padding: 10px 22px; /*height: 190px;*/
+                        .check-box{}
                     }
                 }
                 .terms-2{
